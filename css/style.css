@@ -1,0 +1,321 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}  /* 初始化标签在所有浏览器中的margin、padding值 */
+fieldset,img {border:0 none}  /* 重置fieldset（表单分组）、图片的边框为0*/
+dl,ul,ol,menu,li {list-style:none}   /* 重置类表前导符号为onne,menu在HTML5中有效 */
+blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/
+input,select,textarea,button {vertical-align:middle;outline: none;border: none;}  /* 重置表单控件垂直居中*/
+button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */
+body {position: relative;background-color:#f0f1f5;background-position: left top;}   /* 重置body 页面背景为白色 */
+body,th,td,input,select,textarea,button {font-size:12px;line-height:1.5em ;font-family:"微软雅黑", "黑体","宋体";color:#b7b7b7} /* 重置页面文字属性 */
+a {color:#9a9a9a;text-decoration:none}  /* 重置链接a标签 */
+a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */
+address,caption,cite,code,dfn,em,var {font-weight:normal}  /* 重置样式标签的样式 */
+caption {display:none;}    /* 重置表格标题为隐藏 */
+table {width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;}    /* 重置table属性 */
+img{vertical-align:top;display: block;}  /* 图片在当前行内的垂直位置 */
+  /* 取消a标签点击后的虚线框 */
+a {outline: none;}
+a:active {star:expression(this.onFocus=this.blur());}
+/*清除浮动*/
+.clear{clear: both;}
+/*清除浮动--推荐使用*/
+.clearfix:before,.clearfix:after{content: '';display: table;}
+.clearfix:after{clear: both;}
+
+body {
+	height: 1500px;
+	min-width: 1500px;
+}	
+/*动画*/
+@keyframes mymove
+{
+0%   {transform:rotate(0deg);}
+25%  {transform:rotate(-10deg);}
+50%  {transform:rotate(10deg);}
+75%  {transform:rotate(-10deg);}
+100% {transform:rotate(0deg);}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+0%   {-webkit-transform:rotate(0deg);}
+25%  {-webkit-transform:rotate(-10deg);}
+50%  {-webkit-transform:rotate(10deg);}
+75%  {-webkit-transform:rotate(-10deg);}
+100% {-webkit-transform:rotate(0deg);}
+}
+
+@keyframes show
+{
+0%   {opacity:0;}
+100% {opacity:0.4;}
+}
+
+@-webkit-keyframes show /* Safari and Chrome */
+{
+0%   {opacity:0;}
+100% {opacity:0.4;}
+}
+
+@keyframes showout
+{
+0%   {opacity:0.4;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes showout /* Safari and Chrome */
+{
+0%   {opacity:0.4;}
+100% {opacity:0;}
+}
+
+@keyframes moveupdown
+{
+0%   {margin-top: 0px;}
+50% {margin-top: 5px;}
+100% {margin-top: 0px;}
+}
+
+@-webkit-keyframes moveupdown /* Safari and Chrome */
+{
+0%   {margin-top: 0px;}
+50% {margin-top: 5px;}
+100% {margin-top: 0px;}
+}
+/*顶部导航栏*/
+#topbox {
+	height: 60px;
+	width: 100%;
+	background-color:white;
+	opacity: 0.8;
+	position: fixed;
+	z-index: 555;
+}
+
+#iconbox {
+	height: 60px;
+	width: 90%;
+	margin: 0 auto;
+	/*background-color: yellowgreen;/*之后改*/
+}
+
+.icona {
+	display:inline-block;
+	height: 40px;
+	width: 10%;
+	background-color: #e2e2e2;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+    padding-top: 20px;
+	-webkit-transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
+    -moz-transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
+    transition: color .2s ease-out,border .2s ease-out,opacity .2s ease-out;
+}
+/*和js一起控制小图标动画*/
+.littleicon {
+	display: inline-block;
+}
+
+.iconblue:hover {
+	color: #19b5ed;
+}
+
+.icona:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 54px;
+    height: 6px;
+    background-color: #19b5ed;
+    width: 100%;
+    max-width: 0;
+    transition: max-width .25s ease-in-out
+}
+
+.iconblack:hover {
+	color: #000000;
+}
+
+.iconred:hover {
+	color: #ff3a3a;
+}
+
+.icona:hover:after {
+	max-width: 9%;
+}
+
+font{
+	-webkit-transition: color .1s ease-out,border .2s ease-out,opacity .2s ease-out;
+    -moz-transition: color .1s ease-out,border .2s ease-out,opacity .2s ease-out;
+    transition: color .1s ease-out,border .2s ease-out,opacity .2s ease-out;
+}
+/*背景图片*/
+#bg {
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	position: fixed;
+}
+/*侧边栏*/
+#cebianlan {
+	height: 40px;
+	width: 40px;
+    display: inline-block;
+	float:left;
+	margin-left:18px;
+	margin-top: 10px;
+	text-align: center;
+	-webkit-transition: background-color .3s ease-out;
+    -moz-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out
+}
+
+#cebianlan:hover {
+	background-color: rgba(245,245,245,1);
+	border-radius: 50%;
+	transition: background-color .3s ease-out;
+}
+
+#sidebox {
+	position:fixed;
+	height:800px;
+	left: -305px;
+	top:0;
+	bottom:0;
+	z-index:999;
+	overflow-x: hidden;
+}
+
+#sidecontainbox {
+	width:300px;
+	height:800px;
+	background-color:white;
+}
+
+#mubu {
+	position:fixed;
+	z-index:666;
+	background-color:grey;
+	opacity:0;
+	display:none;
+	transition: opacity 1s ease-out;
+}
+/*滚动条*/
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  background-color: #f5f7fa;
+}
+/*滚动条的轨道*/
+::-webkit-scrollbar-track{
+  /*box-shadow: inset 0 0 5px rgba(0,0,0,.3);*/
+  background-color: #f5f7fa;
+}
+/*滚动条的滑块按钮*/
+::-webkit-scrollbar-thumb{
+  /*border-radius: 10px;*/
+  background-color: #19b5ed;
+  /*box-shadow: inset 0 0 5px #000;*/
+}
+/*滚动条的上下两端的按钮*/
+::-webkit-scrollbar-button{
+  height: 0px;
+  background-color: #B0AEDA;
+}
+
+.drawer {
+	transition: all .3s cubic-bezier(0, 0, 0.2, 1);
+	/*transition: padding .3s cubic-bezier(0,0,.2,1);*/
+}
+
+#bigtitle {
+	font-size: 100px;
+    position: fixed;
+	top: 150px;
+	left: 531px;
+	opacity:0.4;
+	color:white;
+	animation: show 1s ease-out;
+}
+
+.navno2 {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 800px;
+	z-index: 600;
+}
+
+#goup {
+	display: inline-block;
+	position: absolute;
+	left:50%;
+	margin-left: -19px;
+	top:-56px;
+	width:40px;
+	height: 24px;
+	animation: moveupdown 2s infinite;
+
+}
+
+.upicon {
+	position:absolute;
+	top:-20px;
+	color:white;
+}	
+
+	
+#navbox {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+}
+
+.box-active {
+	position: fixed;
+	top: 0;
+}
+
+#mainbody {
+	position: relative;
+	width: 100%;
+	height: 900px;
+	top: 850px;
+	background-color: white;
+	background-image: url(../image/bg.body.png);
+	z-index: 590;	
+}
+
+#todobox {
+	margin-top: 20px;
+	margin-left: 60px;
+	width: 300px;
+	background-color: white;
+	display: inline-block;
+	border-radius: 10px;
+}
+#todoul li {
+	color: #ffa32c;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 6px;
+	margin-right: 6px;
+	border-bottom:1px dashed #b7b7b7;
+}	
+
+
+
+	
+	
+
+
+
+	
+
+	
+
+	
+
+	
