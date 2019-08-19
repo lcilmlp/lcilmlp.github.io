@@ -62,5 +62,15 @@ window.addEventListener("load", function(){
 		mubu.style.opacity = "0";
 		setTimeout("mubu.style.display='none'", 300);
 	}
+	/*解决welcome比图片先出*/
+	var i = document.getElementsByTagName("img"), len = i.length, loaded = 0;
+    for(var j=0;j<len;j++){
+        i[j].onload = (function(){
+                loaded ++;
+                if(loaded == len){
+                    return document.getElementById("bigtitle").style.display = 'block';
+                }
+        })(j);
+    }
 	
 })

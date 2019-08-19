@@ -238,6 +238,7 @@ font{
 	opacity:0.4;
 	color:white;
 	animation: show 1s ease-out;
+	display: none;
 }
 
 .navno2 {
