@@ -289,6 +289,11 @@ font{
 	z-index: 590;	
 }
 
+#leftbox{
+	width: 400px;
+	display: inline-block;
+}	
+
 #todobox {
 	margin-top: 20px;
 	margin-left: 60px;
@@ -298,6 +303,25 @@ font{
 	border-radius: 10px;
 }
 #todoul li {
+	color: #ffa32c;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-left: 6px;
+	margin-right: 6px;
+	border-bottom:1px dashed #b7b7b7;
+}
+
+#realdobox {
+	margin-top: 10px;
+	margin-left: 60px;
+	width: 300px;
+	height: 300px;
+	background-color: white;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+#realdoul li {
 	color: #ffa32c;
 	padding-top: 2px;
 	padding-bottom: 2px;
