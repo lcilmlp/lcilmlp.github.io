@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
 	/*下面的渐变条*/
-	icon = document.getElementsByClassName("littleicon");
-	a = document.getElementsByClassName("icona");
+	var icon = document.getElementsByClassName("littleicon");
+	var a = document.getElementsByClassName("icona");
 	for(i = 0; i < a.length; i++) {
 		a[i].onmouseover = function() {
 			for(j=0; j < a.length; j++){
@@ -21,13 +21,13 @@ window.addEventListener("load", function(){
 		}		
 	}
 	/*谷歌的解决方法*/
-	googlea = document.getElementById("googlea");
-	G = document.getElementById("G");
-	o1 = document.getElementById("o1");
-	o2 = document.getElementById("o2");
-	g = document.getElementById("g");
-	l = document.getElementById("l");
-	e = document.getElementById("e");
+	var googlea = document.getElementById("googlea");
+	var G = document.getElementById("G");
+	var o1 = document.getElementById("o1");
+	var o2 = document.getElementById("o2");
+	var g = document.getElementById("g");
+	var l = document.getElementById("l");
+	var e = document.getElementById("e");
 	googlea.addEventListener("mouseover", function() {
 		G.style.color = "#4285F4";
 		o1.style.color = "#EA4335";
@@ -72,5 +72,10 @@ window.addEventListener("load", function(){
                 }
         })(j);
     }
+	
+	function bodyScroll(event){  
+		
+	} 
+	document.addEventListener('scroll',bodyScroll,false);  
 	
 })
