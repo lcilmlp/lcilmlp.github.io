@@ -24,7 +24,6 @@ a:active {star:expression(this.onFocus=this.blur());}
 .clearfix:after{clear: both;}
 
 body {
-	height: 1500px;
 	min-width: 1500px;
 }	
 /*动画*/
